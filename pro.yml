@@ -2,16 +2,16 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: pro1
+  name: pro
 spec:
   replicas: 0
   selector:
     matchLabels:
-      app: pro1
+      app: pro
   template:
     metadata:
       labels:
-        app: pro1
+        app: pro
     spec:
       containers:
         - name: product-containers
