@@ -1,11 +1,10 @@
 ---
-apiVersion: apps/v1
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   name: pro1
 spec:
-  replicas: 1
+  replicas: 0
   selector:
     matchLabels:
       app: pro1
