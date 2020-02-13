@@ -3,16 +3,16 @@ apiVersion: apps/v1
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: web-server-naz1
+  name: pro1
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: web-server-naz1
+      app: pro1
   template:
     metadata:
       labels:
-        app: web-server-naz1
+        app: pro1
     spec:
       containers:
         - name: web-server-containers
