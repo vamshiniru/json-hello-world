@@ -16,4 +16,4 @@ spec:
     spec:
       containers:
         - name: web-server-containers
-          image: 937382548142.dkr.ecr.ap-south-1.amazonaws.com/myecr:latest
+          image: 937382548142.dkr.ecr.ap-south-1.amazonaws.com/pro:latest
