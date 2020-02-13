@@ -17,15 +17,15 @@ serverId: 'arty'
 	stage('Build Docker Image') {
            steps {
                echo 'Building Docker image'
-               sh 'docker build -t myecr .'
+               sh 'docker build -t pro .'
                 }
             }
         stage ('Uploading to Ecr') {
             steps {
                 echo "uploading to ECR "
                 sh '$(aws ecr get-login --no-include-email --region ap-south-1)'
-                sh 'docker tag myecr:latest 937382548142.dkr.ecr.ap-south-1.amazonaws.com/myecr:latest'
-                sh 'docker push 937382548142.dkr.ecr.ap-south-1.amazonaws.com/myecr:latest'
+                sh 'docker tag pro:latest 937382548142.dkr.ecr.ap-south-1.amazonaws.com/pro:latest'
+                sh 'docker push 937382548142.dkr.ecr.ap-south-1.amazonaws.com/pro:latest'
             }
         }
         
@@ -34,8 +34,8 @@ serverId: 'arty'
             steps {
                  echo "Deploying imgae to EKS"
                  sh 'rm -rf /var/lib/jenkins/.kube/ && aws eks update-kubeconfig --name myeks1 --region ap-south-1'
-                 sh 'kubectl apply -f deployment.yml'
-                 sh 'kubectl apply -f service.yml'
+                 sh 'kubectl apply -f pro.yml'
+                 sh 'kubectl apply -f prosvc.yml'
             }
         }
 }
