@@ -5,7 +5,7 @@ kind: Deployment
 metadata:
   name: pro1
 spec:
-  replicas: 0
+  replicas: 1
   selector:
     matchLabels:
       app: pro1
