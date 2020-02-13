@@ -14,5 +14,5 @@ spec:
         app: pro1
     spec:
       containers:
-        - name: web-server-containers
+        - name: product-containers
           image: 937382548142.dkr.ecr.ap-south-1.amazonaws.com/pro:latest
