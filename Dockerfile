@@ -1,4 +1,3 @@
-FROM tomcat
-#RUN apk --no-cache add curl
-VOLUME /tmp
-COPY  /target/WebApp.war webapps
+FROM httpd
+
+ADD  index.html /usr/share/httpd/noindex/index.html
